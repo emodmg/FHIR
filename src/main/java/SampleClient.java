@@ -63,7 +63,7 @@ public class SampleClient {
         // and store the critical info into Arraylist of Nodes
         List<Node> arr_node = new ArrayList<Node>();
 
-        for (IBaseBundle p : patients) {
+        for (IBaseResource p : patients) {
         	// construct the Node for each patient using firstName, lastName, birthdate 
         	Node node = new Node(p.getName().get(0).getGiven(), p.getName().get(0).getFamily(), p.getBirthdate()); // I tried my best but I am still not sure about the API in FHIR, this getBirthdate should be wrong...
         	arr_node.add(node);
